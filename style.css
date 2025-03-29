@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Imagen de fondo difuminada */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media.istockphoto.com/id/1144698689/es/vector/cr%C3%A1neo-de-barbero-con-barba-y-bigotudo.jpg?s=612x612&w=0&k=20&c=Uef4AKwqoONnCYccDF_tu7R-JNsWkn3QJMTPJAzV_Mc=');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Centrar el cuadro de correo */
+#emailSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    position: relative; /* Asegura que los elementos dentro sean interactivos */
+    z-index: 1; /* Garantiza que el cuadro esté por encima del fondo */
+}
+
+/* Cuadro de inicio de sesión */
+.card {
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #5a9bd4;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 2; /* Asegura que el cuadro esté por encima de otros elementos */
+}
+
+/* Botón "Ver más" */
+button {
+    background-color: white;
+    color: #5a9bd4;
+    border: 2px solid #5a9bd4;
+    padding: 10px 20px;
+    border-radius: 25px; /* Botón redondeado */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+button:hover {
+    background-color: #5a9bd4;
+    color: white;
+    transform: scale(1.1); /* Efecto de agrandamiento */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Texto interactivo "Saimon Barber" */
+.interactive-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #5a9bd4, #e57373);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 3s infinite;
+}
+
+.interactive-text span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.interactive-text span:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(90, 155, 212, 0.8);
+}
+
+/* Animación del degradado */
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Cuadros de la página principal */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 0 8px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #5a9bd4, #e57373);
+}
+
+/* Footer negro */
+.black-footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para el contacto de WhatsApp */
+.whatsapp-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.whatsapp-contact img {
+    width: 24px; /* Tamaño restaurado */
+    height: 24px;
+}
+
+.whatsapp-contact span {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Estilo para el contacto de Instagram */
+.instagram-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.instagram-contact img {
+    width: 24px; /* Tamaño del logo de Instagram */
+    height: 24px;
+}
+
+.instagram-contact span {
+    font-size: 1rem;
+    color: white;
+}
