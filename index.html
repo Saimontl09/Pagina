@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Sección de ingreso del correo -->
+    <div id="emailSection" class="container">
+        <main>
+            <section class="card blue">
+                <h2>Inicia sesión</h2>
+                <p>Por favor, ingresa tu correo electrónico para continuar.</p>
+                <form id="emailForm">
+                    <label for="emailInput">Correo electrónico:</label>
+                    <input type="email" id="emailInput" placeholder="example@example.com" required>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="feedback"></p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Página principal -->
+    <div id="homepageSection" class="container" style="display: none;">
+        <header>
+            <h1 class="interactive-text">
+                <span>S</span><span>a</span><span>i</span><span>m</span><span>o</span><span>n</span> <span>B</span><span>a</span><span>r</span><span>b</span><span>e</span><span>r</span>
+            </h1>
+        </header>
+        <main class="cards-container">
+            <section id="cortes" class="card blue">
+                <h2>Cortes</h2>
+                <p>Visualiza aquí mi trabajo.</p>
+                <button onclick="navigateTo('cortes')">Ver más</button>
+            </section>
+            <section id="redes-sociales" class="card blue">
+                <h2>Redes Sociales</h2>
+                <p>Entra a mis redes si quieres conocer más de mi trabajo.</p>
+                <button onclick="navigateTo('redes-sociales')">Ver más</button>
+            </section>
+            <section id="precios" class="card red">
+                <h2>Precios</h2>
+                
+                <p>Conoce aquí los precios.</p>
+                <button onclick="navigateTo('precios')">Ver más</button>
+            </section>
+            <section id="agenda-cita" class="card blue">
+                <h2>Agenda tu cita</h2>
+                <p>Reserva tu cita fácilmente y asegura tu turno.</p>
+                <button onclick="navigateTo('agenda-cita')">Ver más</button>
+            </section>
+        </main>
+    </div>      
+
+    <!-- Footer con texto, fondo negro y WhatsApp -->
+    <footer class="black-footer">
+        <h1>¡Siempre será un gusto atenderte!</h1>
+        <div class="whatsapp-contact">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            <span>316405149</span>
+        </div>
+        <div class="instagram-contact">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+            <span>@saimonbarber</span>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
